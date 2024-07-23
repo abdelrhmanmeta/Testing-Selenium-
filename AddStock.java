@@ -15,13 +15,13 @@ public class AddStock {
         boolean isTestPassed = true;
         String className = AddStock.class.getSimpleName();
         try {
-            driver.get("https://test.dinarcrm.com/authentication/login");
+            driver.get("link website");
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             WebElement User_Name = driver.findElement(By.xpath("/html/body/app-root/app-login/app-login-form-one/div/div[2]/div[2]/div[1]/form/div[1]/div/input"));
-            User_Name.sendKeys("emp10@atechnologies.info");
+            User_Name.sendKeys("email");
             WebElement Password = driver.findElement(By.id("password"));
-            Password.sendKeys("!!!!Test2222");
+            Password.sendKeys("password");
             WebElement Login_Button = driver.findElement(By.xpath("/html/body/app-root/app-login/app-login-form-one/div/div[2]/div[2]/div[1]/form/div[4]/p-button/button"));
             Login_Button.click();
             WebElement Inventory = driver.findElement(By.xpath("/html/body/app-root/app-template/div/app-sidebar/div/div/div[3]/div[10]"));
