@@ -12,11 +12,14 @@ import java.time.Duration;
 public class AddInvoice { public static void main(String[] args) {
     WebDriverManager.edgedriver().setup();
     WebDriver driver = new ChromeDriver();
+    driver.get("link website");
     try {
         driver.manage().window().maximize();
         WebElement UserName = driver.findElement(By.xpath("/html/body/app-root/app-login/app-login-form-one/div/div[2]/div[2]/div[1]/form/div[1]/div/input"));
+        UserName.sendKeys("email");
 
         WebElement Password = driver.findElement(By.id("password"));
+        Password.sendKeys("password");
 
         WebElement LoginButton = driver.findElement(By.xpath("/html/body/app-root/app-login/app-login-form-one/div/div[2]/div[2]/div[1]/form/div[4]/p-button/button"));
         LoginButton.click();
